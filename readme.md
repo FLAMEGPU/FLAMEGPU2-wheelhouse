@@ -21,6 +21,8 @@ Repository for generating and hosting a python wheelhouse, for non pypi complian
 
 Via GitHub actions, these scripts can be executed, and the resulting HTML file(s) deployed to gh pages, making it publicly accessible on the internet.
 
+Hosted at [`https://whl.flamegpu.com`](https://whl.flamegpu.com).
+
 ## Dependencies
 
 + `python3` (>= 3.6)
