@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # Checkout the repository
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     # Build JSON
     - name: Construct Json
       run: python3 scripts/get_release_json.py data.json
@@ -40,7 +40,7 @@ jobs:
       run: mkdir -p wheelhouse && python3 scripts/build_wheelhouse.py -i data.json -o wheelhouse --baseurl https://whl.flamegpu.com/
     # Save HTML for later
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v5
       with:
         path: ./wheelhouse
 
@@ -56,4 +56,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
